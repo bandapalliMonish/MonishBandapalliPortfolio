@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monish Bandapalli | Data Engineer</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4F46E5", secondary: "#10B981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .timeline-item:nth-child(odd) {
+        flex-direction: row;
+      }
+      .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .timeline-item:nth-child(odd) .timeline-content {
+        text-align: right;
+        align-items: flex-end;
+      }
+      .timeline-item:nth-child(even) .timeline-content {
+        text-align: left;
+        align-items: flex-start;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4f46e5;
+      }
+      .project-card:hover .project-overlay {
+        opacity: 1;
+      }
+      .skill-bar-fill {
+        transition: width 1s ease-in-out;
+      }
+      .nav-link.active {
+        color: #4f46e5;
+        font-weight: 600;
+      }
+      .hamburger {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          flex-direction: column;
+          padding: 1rem;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          z-index: 50;
+        }
+        .nav-menu.active {
+          display: flex;
+        }
+        .timeline-item {
+          flex-direction: column !important;
+        }
+        .timeline-item .timeline-content {
+          text-align: left !important;
+          align-items: flex-start !important;
+          margin-left: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl text-primary">Monish Bandapalli</a>
+        <nav class="nav-menu flex space-x-8">
+          <a
+            href="#about"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#experience"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-700 hover:text-primary transition-colors"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      id="about"
+      class="pt-32 pb-20 relative overflow-hidden"
+      style="
+        background-image: url('https://readdy.ai/api/search-image?query=abstract%20data%20visualization%20background%20with%20blue%20and%20purple%20gradient%2C%20flowing%20data%20particles%2C%20modern%20tech%20aesthetic%2C%20clean%20minimal%20design%2C%20soft%20lighting%2C%20perfect%20for%20a%20data%20engineer%20portfolio%20website&width=1920&height=800&seq=hero1&orientation=landscape');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-2xl">
+          <br><br>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Data Engineer
+          </h1>
+          <br>
+          <p class="text-xl text-gray-200 mb-8">
+            Engineering the flow of data from chaos to clarity
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              class="px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+              >View Projects</a
+            >
+            <a
+              href="https://docs.google.com/document/d/1iTFAPyKU7WZ-R5c-usmi1RO9GvpRjsLN/edit?usp=drive_link&ouid=117559560120958428794&rtpof=true&sd=true"
+              target="_blank"
+              class="px-6 py-3 bg-white text-gray-900 font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >Download Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Technical Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Data Engineering</h3>
+            <div class="space-y-6">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">ETL/ELT Pipelines</span>
+                  <span>95%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    class="skill-bar-fill h-full bg-primary rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Data Warehousing</span>
+                  <span>90%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    class="skill-bar-fill h-full bg-primary rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Data Modeling</span>
+                  <span>85%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    class="skill-bar-fill h-full bg-primary rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Data Quality & Governance</span>
+                  <span>88%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    class="skill-bar-fill h-full bg-primary rounded-full"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Programming Languages</h3>
+            <div id="programming-chart" class="w-full h-80"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Databases</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-database-2-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">PostgreSQL</h4>
+                  <p class="text-sm text-gray-600">Advanced</p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-database-2-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">MongoDB</h4>
+                  <p class="text-sm text-gray-600">Intermediate</p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-database-2-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Snowflake</h4>
+                  <p class="text-sm text-gray-600">Advanced</p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-database-2-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">SQL Server</h4>
+                  <p class="text-sm text-gray-600">Intermediate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-6">Cloud Platforms</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-cloud-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">AWS</h4>
+                  <p class="text-sm text-gray-600">Intermediate</p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-cloud-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Google Cloud</h4>
+                  <p class="text-sm text-gray-600">Intermediate</p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-cloud-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Azure</h4>
+                  <p class="text-sm text-gray-600">Advanced</p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                >
+                  <i class="ri-cloud-line ri-2x"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Databricks</h4>
+                  <p class="text-sm text-gray-600">Advanced</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Timeline -->
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Work Experience</h2>
+        <div class="max-w-4xl mx-auto space-y-12">
+          <!-- Providence Health Plan -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="flex items-start gap-6">
+              <div
+                class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center"
+              >
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-briefcase-line"></i>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <h3 class="text-xl font-semibold">Data Engineer</h3>
+                  <span class="text-sm text-gray-500">Dec 2024 – Present</span>
+                </div>
+                <h4 class="text-primary font-medium mt-1">
+                  Providence Health Plan
+                </h4>
+                <ul class="mt-4 space-y-3 text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Migrated data from SQL Server to Snowflake using
+                      Medallion Architecture, improving data quality and
+                      structure.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Developed a column-level data profiling framework using dynamic SQL (Jinja templated) 
+                      to calculate metrics like null %, distinct count, value ranges, and pattern anomalies 
+                      across Bronze → Silver → Gold layers.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Built and ran row-level reconciliation scripts to compare row counts and hash values between SQL Server and Snowflake tables, 
+                      ensuring zero data loss or transformation errors during migration.</span
+                    >
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Snowflake</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Streamlit</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Azure DevOps</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >SSIS</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Python</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Techvajra Inc. -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="flex items-start gap-6">
+              <div
+                class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center"
+              >
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-briefcase-line"></i>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <h3 class="text-xl font-semibold">Azure Data Engineer</h3>
+                  <span class="text-sm text-gray-500">Mar 2024 – Dec 2024</span>
+                </div>
+                <h4 class="text-primary font-medium mt-1">
+                  RiteRug Flooring
+                </h4>
+                <ul class="mt-4 space-y-3 text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Built lakehouse architecture on Azure, reducing
+                      processing latency by 40%.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Developed ADF pipelines with PySpark and SQL for
+                      ingesting data from APIs and on-prem SQL Server.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Enabled real-time reporting with Synapse and Power BI,
+                      cutting report time by 50%.</span
+                    >
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Azure Synapse</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >ADF</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Databricks</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Delta Lake</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Power BI</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fifth Third Bank -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div class="flex items-start gap-6">
+              <div
+                class="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center"
+              >
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-briefcase-line"></i>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <h3 class="text-xl font-semibold">Associate Data Engineer</h3>
+                  <span class="text-sm text-gray-500">May 2023 – Feb 2024</span>
+                </div>
+                <h4 class="text-primary font-medium mt-1">Fifth Third Bank</h4>
+                <ul class="mt-4 space-y-3 text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Built AWS Glue pipelines for ingesting data from RDS and
+                      DynamoDB.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Optimized Redshift performance with advanced partitioning
+                      and compression.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="ri-checkbox-circle-line text-primary mt-1"></i
+                    ><span
+                      >Implemented real-time streaming with Kinesis and Lambda
+                      to improve latency.</span
+                    >
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >AWS Glue</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Redshift</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Kinesis</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Lambda</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/5 text-primary text-sm !rounded-button"
+                    >Python</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-center text-gray-500 mt-12">
+            For a full list of my professional experiences, please refer to my <a href="https://docs.google.com/document/d/1iTFAPyKU7WZ-R5c-usmi1RO9GvpRjsLN/edit?usp=drive_link&ouid=117559560120958428794&rtpof=true&sd=true" target="_blank"class="text-primary hover:underline">resume</a>.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Project Showcase</h2>
+        <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+          A selection of my most impactful data engineering and analytics
+          projects, demonstrating expertise in building scalable data solutions.
+        </p>
+        <div class="flex justify-center mb-10">
+          <div class="inline-flex bg-gray-100 p-1 !rounded-full">
+            <button
+              class="project-filter px-4 py-2 !rounded-full bg-primary text-white whitespace-nowrap"
+              data-filter="all"
+            >
+              All Projects
+            </button>
+            <button
+              class="project-filter px-4 py-2 !rounded-full text-gray-700 whitespace-nowrap"
+              data-filter="data-pipeline"
+            >
+              Data Pipelines
+            </button>
+            <button
+              class="project-filter px-4 py-2 !rounded-full text-gray-700 whitespace-nowrap"
+              data-filter="visualization"
+            >
+              Visualizations
+            </button>
+            <button
+              class="project-filter px-4 py-2 !rounded-full text-gray-700 whitespace-nowrap"
+              data-filter="machine-learning"
+            >
+              Machine Learning
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-md group"
+            data-category="data-pipeline"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=data%20pipeline%20architecture%20diagram%20with%20flowing%20data%20streams%2C%20modern%20tech%20visualization%2C%20clean%20professional%20design%20with%20blue%20and%20purple%20color%20scheme%2C%20showing%20ETL%20process%20flow%2C%20database%20connections%2C%20and%20cloud%20integration&width=600&height=400&seq=proj1&orientation=landscape"
+              alt="Real-time Data Pipeline"
+              class="w-full h-64 object-cover object-top"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white"
+            >
+              <h3 class="text-xl font-semibold mb-2">
+                Azure Data Engineering Project
+              </h3>
+              <p class="text-center mb-4">
+                Designed and implemented a complete Azure-based solution
+                with ingestion, transformation, orchestration, and reporting
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Azure Data Factory</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Databricks</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Synapse Analytics</span
+                >
+              </div>
+              <a
+                href="https://www.youtube.com/watch?v=0GTZ-12hYtU&t=7146s"
+                target="_blank"
+                class="px-4 py-2 bg-white text-primary font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                Reference
+              </a>
+            </div>
+          </div>
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-md group"
+            data-category="visualization"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=interactive%20data%20dashboard%20with%20multiple%20charts%20and%20visualizations%2C%20business%20analytics%20interface%2C%20clean%20modern%20design%20with%20data%20insights%2C%20professional%20layout%20with%20KPI%20metrics%2C%20financial%20charts%2C%20and%20user%20behavior%20analytics&width=600&height=400&seq=proj2&orientation=landscape"
+              alt="Interactive Analytics Dashboard"
+              class="w-full h-64 object-cover object-top"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white"
+            >
+              <h3 class="text-xl font-semibold mb-2">
+                Interactive Analytics Dashboard
+              </h3>
+              <p class="text-center mb-4">
+                Developed a comprehensive dashboard that visualizes key business
+                metrics, enabling data-driven decision making for executive
+                leadership.
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >D3.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >React</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >GraphQL</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 bg-white text-primary font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-md group"
+            data-category="machine-learning"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=machine%20learning%20model%20visualization%20showing%20predictive%20analytics%2C%20customer%20segmentation%20clusters%20in%203D%20space%2C%20professional%20data%20science%20visualization%20with%20clean%20modern%20design%2C%20showing%20algorithm%20performance%20metrics%20and%20feature%20importance&width=600&height=400&seq=proj3&orientation=landscape"
+              alt="Customer Segmentation Model"
+              class="w-full h-64 object-cover object-top"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white"
+            >
+              <h3 class="text-xl font-semibold mb-2">
+                Customer Segmentation Model
+              </h3>
+              <p class="text-center mb-4">
+                Implemented a machine learning model that identified key
+                customer segments, resulting in a 30% increase in targeted
+                marketing campaign effectiveness.
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Python</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >scikit-learn</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Pandas</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 bg-white text-primary font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-md group"
+            data-category="data-pipeline"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=data%20lake%20architecture%20diagram%20showing%20multi-source%20data%20integration%2C%20storage%20layers%2C%20and%20processing%20components%2C%20clean%20professional%20tech%20visualization%20with%20modern%20design%2C%20showing%20cloud%20storage%20buckets%2C%20data%20flow%2C%20and%20processing%20engines&width=600&height=400&seq=proj4&orientation=landscape"
+              alt="Enterprise Data Lake"
+              class="w-full h-64 object-cover object-top"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white"
+            >
+              <h3 class="text-xl font-semibold mb-2">Enterprise Data Lake</h3>
+              <p class="text-center mb-4">
+                Architected and implemented a cloud-based data lake solution
+                that centralized disparate data sources and reduced data
+                retrieval time by 65%.
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >AWS S3</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Glue</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Athena</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 bg-white text-primary font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-md group"
+            data-category="visualization"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=geospatial%20data%20visualization%20showing%20interactive%20map%20with%20data%20points%2C%20heatmaps%2C%20and%20regional%20analytics%2C%20professional%20GIS%20interface%20with%20clean%20modern%20design%2C%20showing%20location%20intelligence%20and%20spatial%20patterns&width=600&height=400&seq=proj5&orientation=landscape"
+              alt="Geospatial Analytics Platform"
+              class="w-full h-64 object-cover object-top"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white"
+            >
+              <h3 class="text-xl font-semibold mb-2">
+                Geospatial Analytics Platform
+              </h3>
+              <p class="text-center mb-4">
+                Created an interactive mapping platform that visualizes
+                location-based data patterns, helping optimize delivery routes
+                and service coverage areas.
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Mapbox</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >PostGIS</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >JavaScript</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 bg-white text-primary font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+          <div
+            class="project-card relative rounded-lg overflow-hidden shadow-md group"
+            data-category="machine-learning"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=anomaly%20detection%20system%20visualization%20showing%20time%20series%20data%20with%20highlighted%20anomalies%2C%20professional%20monitoring%20dashboard%20with%20alerts%2C%20clean%20modern%20design%20with%20charts%20showing%20normal%20vs%20abnormal%20patterns%2C%20data%20monitoring%20interface&width=600&height=400&seq=proj6&orientation=landscape"
+              alt="Anomaly Detection System"
+              class="w-full h-64 object-cover object-top"
+            />
+            <div
+              class="project-overlay absolute inset-0 bg-primary/90 opacity-0 transition-opacity flex flex-col justify-center items-center p-6 text-white"
+            >
+              <h3 class="text-xl font-semibold mb-2">
+                Anomaly Detection System
+              </h3>
+              <p class="text-center mb-4">
+                Implemented a machine learning-based anomaly detection system
+                that identifies unusual patterns in time-series data, reducing
+                false alerts by 80%.
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >TensorFlow</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Time Series Analysis</span
+                >
+                <span
+                  class="px-2 py-1 bg-white/20 text-white text-xs !rounded-button"
+                  >Python</span
+                >
+              </div>
+              <button
+                class="px-4 py-2 bg-white text-primary font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section removed -->
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Get In Touch</h2>
+        <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+          Interested in working together or have questions about my experience?
+          Feel free to reach out.
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+              <form class="space-y-6" action="https://formsubmit.co/monishbandapalli06@gmail.com" method="POST">
+                <div>
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-primary"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-700 font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-primary"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-primary"
+                    placeholder="What's this about?"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="5"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:border-primary"
+                    placeholder="Your message here..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >
+                  Send Message
+                </button>
+              </form>
+          </div>
+          <div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-6">Connect With Me</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                  >
+                    <i class="ri-mail-line ri-lg"></i>
+                  </div>
+                  <a
+                    href="mailto:monishbandapalli06@example.com"
+                    class="text-gray-700 hover:text-primary transition-colors"
+                    >monishbandapalli06@gmail.com</a
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                  >
+                    <i class="ri-linkedin-box-line ri-lg"></i>
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/monishbandapalli/"
+                    class="text-gray-700 hover:text-primary transition-colors"
+                    >linkedin.com/in/monishbandapalli</a
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-3"
+                  >
+                    <i class="ri-github-line ri-lg"></i>
+                  </div>
+                  <a
+                    href="https://github.com/bandapalliMonish"
+                    class="text-gray-700 hover:text-primary transition-colors"
+                    >github.com/bandapalliMonish</a
+                  >
+                </div>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-6">Education</h3>
+                <div class="bg-white p-6 rounded-lg space-y-6 shadow-sm">
+                  
+                  <div>
+                    <h5 class="text-lg font-semibold">Master of Engineering in Computer Science</h5>
+                    <p class="text-gray-600">University of Cincinnati, 2022 - 2023</p>
+                  </div>
+
+                  <div>
+                    <h5 class="text-lg font-semibold">Bachelor of Engineering in Computer Science</h5>
+                    <p class="text-gray-600">Sathyabama University, 2017 - 2021</p>
+                  </div>
+
+                  <!-- Add more education entries as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-8 md:mb-0">
+            <a href="#" class="text-2xl font-['Pacifico'] text-white"
+              >John Anderson</a
+            >
+            <p class="mt-2 text-gray-400">Data Engineer & Analytics Expert</p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-semibold mb-4">Navigation</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#about"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#skills"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#experience"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Projects</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Connect</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-400 hover:text-white transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+              <h4 class="font-semibold mb-4">Built With</h4>
+              <ul class="space-y-2">
+                <li class="text-gray-400">HTML5 & CSS3</li>
+                <li class="text-gray-400">JavaScript</li>
+                <li class="text-gray-400">ECharts</li>
+                <li class="text-gray-400">Tailwind CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400">
+            © 2025 John Anderson. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-linkedin-box-line ri-lg"></i>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-github-line ri-lg"></i>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-twitter-line ri-lg"></i>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-mail-line ri-lg"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300 hover:bg-primary/90"
+    >
+      <div class="w-6 h-6 flex items-center justify-center">
+        <i class="ri-arrow-up-line"></i>
+      </div>
+    </button>
+    <!-- Scripts -->
+    <script id="navigation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+        // Active navigation highlighting
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+        function highlightNavigation() {
+          const scrollPosition = window.scrollY;
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            const sectionId = section.getAttribute("id");
+            if (
+              scrollPosition >= sectionTop &&
+              scrollPosition < sectionBottom
+            ) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${sectionId}`) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        }
+        window.addEventListener("scroll", highlightNavigation);
+        highlightNavigation();
+        // Mobile menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        if (hamburger && navMenu) {
+          hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+          });
+          // Close mobile menu when clicking a nav item
+          navMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              navMenu.classList.remove("active");
+            });
+          });
+        }
+      });
+    </script>
+    <script id="back-to-top-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById("back-to-top");
+        if (backToTopButton) {
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+              backToTopButton.style.opacity = "1";
+            } else {
+              backToTopButton.style.opacity = "0";
+            }
+          });
+          backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          });
+        }
+      });
+    </script>
+    <script id="project-filter-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".project-filter");
+        const projectCards = document.querySelectorAll(".project-card");
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Update active button
+            filterButtons.forEach((btn) => {
+              btn.classList.remove("bg-primary", "text-white");
+              btn.classList.add("text-gray-700");
+            });
+            button.classList.add("bg-primary", "text-white");
+            button.classList.remove("text-gray-700");
+            // Filter projects
+            const filter = button.getAttribute("data-filter");
+            projectCards.forEach((card) => {
+              if (
+                filter === "all" ||
+                card.getAttribute("data-category") === filter
+              ) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+    <script id="charts-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Programming Languages Chart
+        const programmingChart = echarts.init(
+          document.getElementById("programming-chart")
+        );
+        const programmingOption = {
+          animation: false,
+          radar: {
+            indicator: [
+              { name: "Python", max: 100 },
+              { name: "SQL", max: 100 },
+              { name: "Java", max: 100 },
+              { name: "PySpark", max: 100 },
+              { name: "Golang", max: 100 },
+            ],
+            radius: "65%",
+            splitLine: {
+              lineStyle: {
+                color: "rgba(238, 238, 238, 1)",
+              },
+            },
+            axisLine: {
+              lineStyle: {
+                color: "rgba(238, 238, 238, 1)",
+              },
+            },
+          },
+          series: [
+            {
+              type: "radar",
+              data: [
+                {
+                  value: [95, 90, 50, 70, 65],
+                  name: "Skill Level",
+                  areaStyle: {
+                    color: "rgba(87, 181, 231, 0.1)",
+                  },
+                  lineStyle: {
+                    color: "rgba(87, 181, 231, 1)",
+                  },
+                  itemStyle: {
+                    color: "rgba(87, 181, 231, 1)",
+                  },
+                },
+              ],
+            },
+          ],
+          textStyle: {
+            color: "#1f2937",
+          },
+        };
+        programmingChart.setOption(programmingOption);
+        // Customer Acquisition Chart
+        const customerChart = echarts.init(
+          document.getElementById("customer-chart")
+        );
+        const customerOption = {
+          animation: false,
+          tooltip: {
+            trigger: "axis",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            borderColor: "#eee",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          legend: {
+            data: ["Organic Search", "Paid Campaigns", "Referrals", "Direct"],
+            bottom: 0,
+          },
+          grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "15%",
+            top: "3%",
+            containLabel: true,
+          },
+          xAxis: {
+            type: "category",
+            boundaryGap: false,
+            data: [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+            ],
+          },
+          yAxis: {
+            type: "value",
+          },
+          series: [
+            {
+              name: "Organic Search",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 2,
+                color: "rgba(87, 181, 231, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(87, 181, 231, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(87, 181, 231, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [
+                120, 132, 101, 134, 190, 230, 210, 240, 280, 300, 340, 360,
+              ],
+            },
+            {
+              name: "Paid Campaigns",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 2,
+                color: "rgba(141, 211, 199, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(141, 211, 199, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(141, 211, 199, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [
+                220, 182, 191, 234, 290, 330, 310, 290, 270, 250, 220, 200,
+              ],
+            },
+            {
+              name: "Referrals",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 2,
+                color: "rgba(251, 191, 114, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(251, 191, 114, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(251, 191, 114, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [
+                150, 232, 201, 154, 190, 230, 210, 240, 250, 220, 210, 195,
+              ],
+            },
+            {
+              name: "Direct",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 2,
+                color: "rgba(252, 141, 98, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(252, 141, 98, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(252, 141, 98, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [80, 70, 90, 70, 85, 110, 130, 150, 160, 165, 170, 180],
+            },
+          ],
+          textStyle: {
+            color: "#1f2937",
+          },
+        };
+        customerChart.setOption(customerOption);
+        // Performance Chart
+        const performanceChart = echarts.init(
+          document.getElementById("performance-chart")
+        );
+        const performanceOption = {
+          animation: false,
+          tooltip: {
+            trigger: "axis",
+            axisPointer: {
+              type: "shadow",
+            },
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            borderColor: "#eee",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          legend: {
+            data: ["Before Optimization", "After Optimization"],
+            bottom: 0,
+          },
+          grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "15%",
+            top: "3%",
+            containLabel: true,
+          },
+          xAxis: {
+            type: "category",
+            data: [
+              "Data Loading",
+              "Transformation",
+              "Validation",
+              "Aggregation",
+              "Export",
+            ],
+          },
+          yAxis: {
+            type: "value",
+            name: "Time (seconds)",
+          },
+          series: [
+            {
+              name: "Before Optimization",
+              type: "bar",
+              itemStyle: {
+                color: "rgba(252, 141, 98, 1)",
+                borderRadius: [4, 4, 0, 0],
+              },
+              data: [120, 200, 150, 80, 70],
+            },
+            {
+              name: "After Optimization",
+              type: "bar",
+              itemStyle: {
+                color: "rgba(87, 181, 231, 1)",
+                borderRadius: [4, 4, 0, 0],
+              },
+              data: [45, 70, 50, 30, 25],
+            },
+          ],
+          textStyle: {
+            color: "#1f2937",
+          },
+        };
+        performanceChart.setOption(performanceOption);
+        // Monitoring Chart
+        const monitoringChart = echarts.init(
+          document.getElementById("monitoring-chart")
+        );
+        const monitoringOption = {
+          animation: false,
+          tooltip: {
+            trigger: "axis",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            borderColor: "#eee",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          legend: {
+            data: ["CPU Usage", "Memory Usage", "Network Traffic"],
+            bottom: 0,
+          },
+          grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "15%",
+            top: "3%",
+            containLabel: true,
+          },
+          xAxis: {
+            type: "category",
+            boundaryGap: false,
+            data: [
+              "00:00",
+              "03:00",
+              "06:00",
+              "09:00",
+              "12:00",
+              "15:00",
+              "18:00",
+              "21:00",
+              "00:00",
+            ],
+          },
+          yAxis: {
+            type: "value",
+            axisLabel: {
+              formatter: "{value}%",
+            },
+          },
+          series: [
+            {
+              name: "CPU Usage",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 2,
+                color: "rgba(87, 181, 231, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(87, 181, 231, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(87, 181, 231, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [30, 40, 35, 50, 70, 65, 45, 60, 75],
+            },
+            {
+              name: "Memory Usage",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 2,
+                color: "rgba(141, 211, 199, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(141, 211, 199, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(141, 211, 199, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [50, 55, 60, 65, 60, 70, 75, 70, 65],
+            },
+            {
+              name: "Network Traffic",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 2,
+                color: "rgba(251, 191, 114, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(251, 191, 114, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(251, 191, 114, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [20, 15, 10, 30, 40, 45, 35, 25, 20],
+            },
+          ],
+          textStyle: {
+            color: "#1f2937",
+          },
+        };
+        monitoringChart.setOption(monitoringOption);
+        // Resize charts when window size changes
+        window.addEventListener("resize", function () {
+          programmingChart.resize();
+          customerChart.resize();
+          performanceChart.resize();
+          monitoringChart.resize();
+        });
+      });
+    </script>
+    <script id="skill-animation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const skillBars = document.querySelectorAll(".skill-bar-fill");
+        function animateSkillBars() {
+          skillBars.forEach((bar) => {
+            const targetWidth = bar.style.width;
+            bar.style.width = "0%";
+            setTimeout(() => {
+              bar.style.width = targetWidth;
+            }, 300);
+          });
+        }
+        // Animate when skills section is in view
+        const skillsSection = document.getElementById("skills");
+        if (skillsSection) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  animateSkillBars();
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+          observer.observe(skillsSection);
+        }
+      });
+    </script>
+  </body>
+</html>
